@@ -1,0 +1,8 @@
+- storead ssti in login page
+  - make a user named `{{.File "database.db"}}`
+- read database.db to get dimas's password
+- login with dimas's creadential
+- find hidden Test query
+- ssti to Test.Exec and get rce
+  - {{.Test.Exec "/readflag"}}
+- execute /readflag
