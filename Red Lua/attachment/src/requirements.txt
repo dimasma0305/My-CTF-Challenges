@@ -1,0 +1,5 @@
+flask
+requests
+redis
+flask_session
+flask_caching

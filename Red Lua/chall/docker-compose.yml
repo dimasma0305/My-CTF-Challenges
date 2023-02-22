@@ -1,0 +1,26 @@
+version: '3'
+services:
+  redis:
+    build: redis/
+  app:
+    build: src/
+    links:
+      - "redis"
+    ports:
+      - "${PORT}:8080"
+    environment:
+      # - SESSION_TYPE=redis
+      - SESSION_PERMANENT=False
+      - SESSION_USE_SIGNER=True
+      - SESSION_REDIS=redis://redis:6379
+      
+      # - CACHE_TYPE=redis
+      - CACHE_REDIS_HOST=redis
+      - CACHE_REDIS_PORT=6379
+      - CACHE_REDIS_DB=0
+      - CACHE_REDIS_URL=redis://redis:6379
+      - CACHE_DEFAULT_TIMEOUT=30
+      
+      - SECRET_KEY=password123
+
+      - FLASK_DEBUG=1
