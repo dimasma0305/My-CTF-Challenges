@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  app:
+    build: src
+    restart: always
+    ports:
+      - 15907:5000
+    networks:
+      - internal
+    depends_on:
+      - bot
+  bot:
+    build: bot
+    restart: always
+    environment:
+      APPNAME: Admin
+      APPURL: http://app:5000/
+      APPURLREGEX: http://app:5000/.*
+      APPFLAG: Hology6{sadly_your_secret_is_not_secure_here}
+      APPLIMIT: 2
+      APPLIMITTIME: 60
+    ports:
+      - 10338:80
+    networks:
+      - internal
+
+networks:
+  internal:

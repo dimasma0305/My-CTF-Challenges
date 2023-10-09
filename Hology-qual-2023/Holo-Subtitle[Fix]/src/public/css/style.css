@@ -1,0 +1,23 @@
+body {
+  font-family: 'Lora', serif;
+  text-align: center;
+  background-image: url(https://wallpapercave.com/wp/wp8106800.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  color: black;
+  position: absolute;
+  bottom: 0%; /* Vertically center the h1 within the cloud */
+  left: 50%; /* Horizontally center the h1 within the cloud */
+  transform: translate(-50%, -50%); /* Center the h1 perfectly */
+}

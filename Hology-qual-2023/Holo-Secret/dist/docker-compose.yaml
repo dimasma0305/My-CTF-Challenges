@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  app:
+    build: src
+    ports:
+      - 15907:5000
+    networks:
+      - internal
+    depends_on:
+      - bot
+  bot:
+    build: bot
+    environment:
+      APPNAME: Admin
+      APPURL: http://app:5000/
+      APPURLREGEX: http://app:5000/.*
+      APPFLAG: fake{flag}
+      APPLIMIT: 2
+      APPLIMITTIME: 60
+    ports:
+      - 10338:80
+    networks:
+      - internal
+
+networks:
+  internal:

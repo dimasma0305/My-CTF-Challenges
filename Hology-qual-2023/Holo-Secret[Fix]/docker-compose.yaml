@@ -1,0 +1,19 @@
+version: "3"
+
+x-vars: &php-volumes
+  - ./src/:/var/www/html/:ro
+  - ./nginx/:/etc/nginx/conf.d/:ro
+
+services:
+  php-fpm:
+    build: .
+    restart: always
+    volumes: *php-volumes
+
+  nginx:
+    image: openresty/openresty:alpine
+    volumes: *php-volumes
+    restart: always
+    ports:
+      - 31530:8080
+
