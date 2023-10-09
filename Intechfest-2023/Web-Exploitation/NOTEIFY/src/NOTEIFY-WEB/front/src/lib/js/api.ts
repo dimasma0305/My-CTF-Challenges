@@ -1,0 +1,61 @@
+// Login function
+export async function login(username: string, password: string) {
+  const response = await fetch(`/api/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ username, password })
+  });
+  return response
+}
+
+// Register function
+export async function register(username: string, password: string) {
+  const response = await fetch(`/api/register`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ username, password })
+  });
+  return response
+}
+
+
+export async function getnote(noteid: string) {
+  const response = await fetch(`/api/getnote/${noteid}`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${localStorage.bearerToken}`
+    }
+  })
+  return response
+}
+
+export async function addnote(title: string, content: string) {
+  const response = await fetch(`/api/addnote`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${localStorage.bearerToken}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ title, content })
+  })
+  return response
+}
+
+export async function getnotes() {
+  const response = await fetch(`/api/getnotes`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${localStorage.bearerToken}`,
+      "Content-Type": "application/json"
+    },
+  })
+  return response
+}
+
+export function decodeBearerToken(token: string){
+  return atob(token).split(":")
+}

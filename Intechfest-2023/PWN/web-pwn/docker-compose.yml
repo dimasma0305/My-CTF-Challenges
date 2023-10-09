@@ -1,0 +1,18 @@
+version: "3"
+networks:
+  internal:
+services:
+  neko:
+    build: neko
+    # restart: always
+    networks:
+      - internal
+  traefik:
+    image: traefik:latest
+    volumes:
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./traefik/web.yml:/etc/traefik/web.yml:ro
+    ports:
+      - "80:80"
+    networks:
+      - internal

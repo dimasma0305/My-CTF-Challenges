@@ -1,0 +1,24 @@
+http:
+  routers:
+    frontend:
+      service: frontend
+      rule: "PathPrefix(`/`)"
+    backend:
+      service: backend
+      rule: "PathPrefix(`/api`)"
+    bot:
+      service: bot
+      rule: "PathPrefix(`/report`)"
+  services:
+    frontend:
+      loadBalancer:
+        servers:
+          - url: "http://frontend:4173/"
+    backend:
+      loadBalancer:
+        servers:
+          - url: "http://backend:8080/"
+    bot:
+      loadBalancer:
+        servers:
+          - url: "http://bot:8080/"

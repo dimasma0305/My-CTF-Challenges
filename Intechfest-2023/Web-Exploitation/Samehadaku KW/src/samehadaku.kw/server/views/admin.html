@@ -1,0 +1,25 @@
+{% include "header.html" %}
+
+<div class="container py-5">
+  <h1>Upload Zip File</h1>
+  <form method="post" enctype="multipart/form-data" action="/uploadzip">
+    <div class="form-group">
+      <label for="zipFile">Zip File</label>
+      <input type="file" class="form-control-file" id="zipFile" name="file">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <div class="py-5"></div>
+
+  <h1>Upload Tar File</h1>
+  <form method="post" enctype="multipart/form-data" action="/uploadtar">
+    <div class="form-group">
+      <label for="tarFile">Tar File</label>
+      <input type="file" class="form-control-file" id="tarFile" name="file">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+{% include "footer.html" %}

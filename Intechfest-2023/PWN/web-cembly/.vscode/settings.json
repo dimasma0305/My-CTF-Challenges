@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "emscripten.h": "c",
+        "html5.h": "c",
+        "em_js.h": "c",
+        "em_macros.h": "c"
+    }
+}

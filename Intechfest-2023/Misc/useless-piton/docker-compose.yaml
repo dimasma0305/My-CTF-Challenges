@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  jail:
+    build: .
+    volumes:
+      - ./app.py:/srv/app/run:ro
+      - ./flag.txt:/srv/flag.txt:ro
+    ports:
+      - 25776:5000
+    privileged: true

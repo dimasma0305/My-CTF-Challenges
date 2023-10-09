@@ -1,0 +1,17 @@
+http:
+  routers:
+    backend:
+      service: neko
+      rule: PathPrefix(`/`)
+    forbidden:
+      service: waf
+      rule: PathPrefix(`/admin`)
+  services:
+    neko:
+      loadBalancer:
+        servers:
+          - url: http://neko:80/
+    waf:
+      loadBalancer:
+        servers:
+          - url: https://google.com/

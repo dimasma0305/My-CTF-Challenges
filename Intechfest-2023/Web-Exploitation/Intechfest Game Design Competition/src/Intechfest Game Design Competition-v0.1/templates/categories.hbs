@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/style.css" rel="stylesheet" />
+    <title>Categories</title>
+</head>
+
+<body>
+    {{include "addon/navbar.hbs"}}
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1" style="color:white">Categories</h1>
+                <img src="/static/logo.svg" alt="Logo" class="logo">
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <br />
+        <div class="category-container">
+            <div class="category-item" data-aos="fade-down" data-aos-delay="100"
+                style="background-color: #ff6384;">
+                <img src="/static/image/retro.png"
+                    alt="Retro Games" class="category-icon">
+                <h3 class="category-title">Retro Games</h3>
+            </div>
+            <div class="category-item" data-aos="fade-down" data-aos-delay="200" style="background-color: #ffcd56;">
+                <img src="/static/image/rpg.png"
+                    alt="RPG Games" class="category-icon">
+                <h3 class="category-title">RPG Games</h3>
+            </div>
+            <div class="category-item" data-aos="fade-down" data-aos-delay="300"
+                style="background-color: #36a2eb;">
+                <img src="/static/image/visual-novel.png"
+                    alt="Visual Novels" class="category-icon">
+                <h3 class="category-title">Visual Novels</h3>
+            </div>
+            <div class="category-item" data-aos="fade-down" data-aos-delay="400"
+                style="background-color: #4bc0c0;">
+                <img src="/static/image/hack-n-slash.png" alt="Hack n Slash Games" class="category-icon">
+                <h3 class="category-title">Hack n Slash Games</h3>
+            </div>
+            <div class="category-item" data-aos="fade-down" data-aos-delay="500"
+                style="background-color: #ff9f40;">
+                <img src="/static/image/pixel.png" alt="Pixel Games" class="category-icon">
+                <h3 class="category-title">Pixel Games</h3>
+            </div>
+            <div class="category-item" data-aos="fade-down" data-aos-delay="600"
+                style="background-color: #9966cc;">
+                <img src="/static/image/fantasy.png" alt="Fantasy Games" class="category-icon">
+                <h3 class="category-title">Fantasy Games</h3>
+            </div>
+
+            <!-- Add more category items here -->
+        </div>
+    </section>
+
+
+    {{include "addon/footer.hbs"}}
+</body>
+
+</html>

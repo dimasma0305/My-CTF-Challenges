@@ -1,0 +1,24 @@
+FROM ubuntu:latest
+
+WORKDIR /app
+
+RUN apt-get update -y
+RUN apt-get install -y wget rustc
+COPY templates templates
+COPY static static
+COPY Rocket.toml Rocket.toml
+COPY target/release/gdc-bin gdc-bin
+
+RUN useradd --shell /bin/bash ctf
+RUN chown ctf:ctf /app && chmod 700 /app
+RUN chown ctf:ctf /app/templates
+
+COPY ./flag.txt /root/flag.txt
+RUN chmod 400 /root/flag.txt
+
+COPY ./readflag /readflag
+RUN chmod u+s /readflag
+
+USER ctf
+EXPOSE 80
+CMD [ "./gdc-bin" ]

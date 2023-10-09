@@ -1,0 +1,29 @@
+[package]
+name = "gdc-bin"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.11"
+serde_json = "1.0"
+magick_rust = "0.18.0"
+base64 = "0.21.0"
+jsonwebtoken = "8.3.0"
+lazy_static = "1.4.0"
+rand = "0.8.5"
+rocket-multipart-form-data = "0.9.6"
+chrono = "0.4.24"
+
+[dependencies.rusqlite]
+version = "0.29.0"
+features = ["bundled"]
+
+[dependencies.serde]
+version = "1.0"
+features = ["derive"]
+
+[dependencies.rocket_contrib]
+version = "0.4.11"
+features = ["handlebars_templates", "tera_templates"]

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/style.css" rel="stylesheet" />
+    <title>Submission</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    {{include "addon/navbar.hbs"}}
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1" style="color:white">Submission</h1>
+                <img src="/static/logo.svg" alt="Logo" class="logo">
+            </div>
+        </div>
+    </section>
+
+    <section class="submission-section">
+        <div class="container">
+            <h2 class="title is-3">Submit Your Game</h2>
+            <p class="subtitle">Please fill out the form below to submit your game for the competition.</p>
+            <div id="responseMessage" class="response-message"></div> <!-- Added response message div -->
+            <form id="gameSubmissionForm" enctype="multipart/form-data">
+                <div class="field">
+                    <label class="label">Game Title</label>
+                    <div class="control">
+                        <input id="gameTitleInput" class="input" type="text" placeholder="Enter the game title">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Description</label>
+                    <div class="control">
+                        <textarea id="gameDescriptionInput" class="textarea"
+                            placeholder="Enter a description of your game"></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Upload Game File</label>
+                    <div class="control">
+                        <input id="gameFileInput" class="input" type="file">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button id="submitButton" class="button is-primary" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            // Handle form submission
+            $('#gameSubmissionForm').on('submit', function (e) {
+                e.preventDefault();
+
+                // Get form data
+                var formData = new FormData();
+                formData.append('gameTitle', $('#gameTitleInput').val());
+                formData.append('gameDescription', $('#gameDescriptionInput').val());
+                formData.append('gameFile', $('#gameFileInput')[0].files[0]);
+
+                // Send AJAX request
+                $.ajax({
+                    url: '/api/upload',
+                    type: 'POST',
+                    data: formData,
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    contentType: false,
+                    processData: false,
+                    success: function (response) {
+                        // Handle success response
+                        displayResponse(response.message, 'success');
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle error response
+                        displayResponse(JSON.parse(xhr.responseText).message, 'error');
+                    }
+                });
+            });
+
+            function displayResponse(message, status) {
+                var responseContainer = $('#responseMessage');
+                responseContainer.text(message);
+
+                if (status === 'success') {
+                    responseContainer.removeClass('is-hidden').removeClass('is-danger').addClass('notification is-success');
+                } else {
+                    responseContainer.removeClass('is-hidden').removeClass('is-success').addClass('notification is-danger');
+                }
+            }
+
+        });
+    </script>
+
+    {{include "addon/footer.hbs"}}
+</body>
+
+</html>

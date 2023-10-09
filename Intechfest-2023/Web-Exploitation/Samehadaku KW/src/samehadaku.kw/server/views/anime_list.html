@@ -1,0 +1,109 @@
+{% include "header.html" %}
+<style>
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .card-title {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  .btn-watch {
+    background-color: #e74c3c;
+    border: none;
+    margin-top: 10px;
+  }
+
+  .btn-watch:hover {
+    background-color: #c0392b;
+  }
+
+  .preview {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .video-preview {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .video-preview .play-btn {
+    position: absolute;
+    z-index: 1;
+    font-size: 4rem;
+    color: white;
+    cursor: pointer;
+  }
+</style>
+<script>
+  $(document).ready(function () {
+    $.ajax({
+      url: "/get/video",
+      method: "GET",
+      success: function (data) {
+        console.log(data);
+        var videoPaths = data.video_paths;
+        var videoList = $("#video-list");
+        for (var i = 0; i < videoPaths.length; i++) {
+          var videoPath = $('<div>').text(videoPaths[i]).html();
+          var videoName = $('<div>').text(videoPath.split("/").pop().split(".")[0]).html();
+          var videoPreview = videoPath.replace("/video/", "/preview/") + ".jpg";
+          var videoHtml =
+            '<div class="col-md-4 mb-3">\n' +
+            '  <div class="card">\n' +
+            '    <div class="video-preview">\n' +
+            '      <img class="preview" src="' +
+            videoPreview +
+            '"/>\n' +
+            '      <i class="fas fa-play-circle play-btn"></i>\n' +
+            '    </div>\n' +
+            '    <div class="card-img-overlay">\n' +
+            '      <h5 class="card-title">' +
+            videoName +
+            "</h5>\n" +
+            '      <a href="' +
+            videoPath +
+            '" class="btn btn-watch">Watch Now</a>\n' +
+            "    </div>\n" +
+            "  </div>\n" +
+            "</div>";
+          videoList.append(videoHtml);
+        }
+
+        // Video preview hover effect
+        $(".video-preview").hover(
+          function () {
+            $(this).find(".play-btn").css("opacity", "1");
+          },
+          function () {
+            $(this).find(".play-btn").css("opacity", "0");
+          }
+        );
+      },
+      error: function (err) {
+        console.log(err);
+      },
+    });
+  });
+</script>
+<div class="container">
+  <div class="row" id="video-list"></div>
+</div>
+{% include "footer.html" %}

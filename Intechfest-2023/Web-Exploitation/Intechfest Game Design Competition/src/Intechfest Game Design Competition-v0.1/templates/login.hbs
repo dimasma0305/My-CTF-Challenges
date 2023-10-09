@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/style.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    {{include "addon/navbar.hbs"}}
+    <section class="section">
+        <div class="container">
+            <div class="content">
+                <h2 class="title is-3">Login</h2>
+                <div id="loginResponse" class="notification is-hidden"></div>
+                <form id="loginForm">
+                    <div class="field">
+                        <label class="label">Username</label>
+                        <div class="control">
+                            <input class="input" type="text" name="username" placeholder="Enter your username" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
+                            <input class="input" type="password" name="password" placeholder="Enter your password"
+                                required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary" type="submit">Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#loginForm').submit(function (e) {
+                e.preventDefault();
+
+                var formData = {
+                    username: $('input[name=username]').val(),
+                    password: $('input[name=password]').val()
+                };
+
+                $.ajax({
+                    url: '/api/login',
+                    type: 'POST',
+                    data: JSON.stringify(formData),
+                    contentType: 'application/json',
+                    success: function (response) {
+                        // Handle successful response here
+                        displayResponse(response.message, 'success');
+                    },
+                    error: function (error) {
+                        // Handle error response here
+                        var response = error.responseJSON;
+                        displayResponse(response.message, 'error');
+                    }
+                });
+            });
+
+            function displayResponse(message, status) {
+                var responseContainer = $('#loginResponse');
+                responseContainer.text(message);
+
+                if (status === 'success') {
+                    responseContainer.removeClass('is-hidden').removeClass('is-danger').addClass('notification is-success');
+                } else {
+                    responseContainer.removeClass('is-hidden').removeClass('is-success').addClass('notification is-danger');
+                }
+            }
+        });
+    </script>
+
+
+    {{include "addon/footer.hbs"}}
+</body>
+
+</html>

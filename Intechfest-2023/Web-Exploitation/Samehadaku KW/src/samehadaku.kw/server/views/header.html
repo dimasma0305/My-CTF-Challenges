@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ context.title }}</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        /* Global styles */
+        body {
+            background-color: {{ context.theme }};
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            /* adjust this to match the height of your navbar */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #222;
+            padding: 1rem 2rem;
+            border-radius: 0;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f00;
+        }
+
+        /* Jumbotron styles */
+        .jumbotron {
+            background-color: #222;
+            background-image: url('https://www.wallpapertip.com/wmimgs/14-141310_anime-background-1920x1080.jpg');
+            background-size: cover;
+            background-position: center center;
+            color: #fff;
+            text-shadow: 2px 2px #000;
+            padding: 10rem 2rem;
+            margin-bottom: 0;
+        }
+
+        .jumbotron h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .jumbotron p {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .jumbotron a.btn {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 1rem 2rem;
+            background-color: #f00;
+            border-color: #f00;
+            margin-top: 2rem;
+        }
+
+        .jumbotron a.btn:hover {
+            background-color: #fff;
+            color: #f00;
+        }
+
+        /* Card styles */
+        .card {
+            background-color: #222;
+            border: none;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            margin: 2rem;
+        }
+
+        .card img {
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card h5 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            height: 100px;
+            overflow: hidden;
+            color: #555;
+            font-weight: 500;
+            line-height: 1.4em;
+        }
+
+        .card a.btn {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #f44336;
+            border-color: #f44336;
+            border-radius: 3px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .card a.btn:hover {
+            background-color: #fff;
+            color: #f44336;
+            border-color: #f44336;
+            box-shadow: 0px 0px 10px rgba(244, 67, 54, 0.5);
+        }
+
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        footer li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 10px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .form-control:focus {
+            border-color: #7ed6df;
+            box-shadow: none;
+        }
+
+        .btn-outline-success {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #7ed6df;
+            border-color: #7ed6df;
+        }
+
+        .social-media li a i {
+            font-size: 24px;
+        }
+
+        #navbar {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: translateY(0);
+        }
+
+        #navbar.hidden {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SAMEHADAKU</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/animelist">Anime List</a>
+              </li>
+              {% if context.user.isAdmin %}
+              <li class="nav-item">
+                <a class="nav-link" href="/admin">Admin Panel</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <script>
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+            var delta = 5;
+            var navbarHeight = $('#navbar').outerHeight();
+            var isMouseOver = false;
+
+            $(window).on('mousemove', function (event) {
+                isMouseOver = event.clientY <= navbarHeight;
+                toggleNavbar();
+            });
+
+            $(window).on('scroll', function () {
+                var st = $(this).scrollTop();
+
+                if (Math.abs(lastScrollTop - st) <= delta)
+                    return;
+
+                if (st > lastScrollTop && st > navbarHeight) {
+                    // Scrolling down
+                    $('#navbar').addClass('hidden');
+                } else {
+                    // Scrolling up
+                    if (st + $(window).height() < $(document).height()) {
+                        $('#navbar').removeClass('hidden');
+                    }
+                }
+
+                lastScrollTop = st;
+            });
+
+            function toggleNavbar() {
+                if (isMouseOver || $(document).scrollTop() === 0) {
+                    $('#navbar').removeClass('hidden');
+                } else {
+                    $('#navbar').addClass('hidden');
+                }
+            }
+        });
+
+    </script>

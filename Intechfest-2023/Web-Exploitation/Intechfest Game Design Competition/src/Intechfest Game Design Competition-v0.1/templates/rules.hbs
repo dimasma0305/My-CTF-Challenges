@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/style.css" rel="stylesheet" />
+    <title>Rules</title>
+</head>
+
+<body>
+    {{include "addon/navbar.hbs"}}
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1" style="color:white">Rules</h1>
+                <img src="/static/logo.svg" alt="Logo" class="logo">
+            </div>
+        </div>
+    </section>
+
+    <section class="box">
+        <div class="container">
+            <h2 class="title is-3">Competition Rules</h2>
+            <ol>
+                <li>Participants must be at least 18 years old.</li>
+                <li>Entries must be original creations and not infringe upon any
+                    existing copyrights or trademarks.</li>
+                <li>Each participant can submit only one game.</li>
+                <li>The game should be developed specifically for this
+                    competition.</li>
+                <li>The game can be developed using any game engine or
+                    programming language.</li>
+                <li>Entries must be submitted before the specified deadline.
+                </li>
+                <li>All entries will be judged based on the judging criteria
+                    mentioned above.</li>
+                <li>The decision of the judges will be final and binding.</li>
+                <li>Winners will be announced on the competition website and
+                    notified via email.</li>
+            </ol>
+        </div>
+    </section>
+
+
+    {{include "addon/footer.hbs"}}
+</body>
+
+</html>

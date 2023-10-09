@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  frontend:
+    build: front
+    restart: on-failure
+    networks:
+      - main
+  backend:
+    build: src
+    restart: on-failure
+    environment: &admin_creds
+      TARGET_USERNAME: dimas
+      TARGET_PASSWORD: INTECHFEST{dd3e8d3a9da4b3399b126f00b534b530be47aa40e280583a6b1f20ebdbfce101}
+    networks:
+      - main
+  bot:
+    build: bot
+    restart: on-failure
+    environment:
+      <<: *admin_creds
+      APPURL: http://172.17.0.1
+    networks:
+      - main
+  traefik:
+    image: traefik:latest
+    volumes:
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./traefik/web.yml:/etc/traefik/web.yml:ro
+    ports:
+      - "80:80"
+    networks:
+      - main
+
+networks:
+  main:

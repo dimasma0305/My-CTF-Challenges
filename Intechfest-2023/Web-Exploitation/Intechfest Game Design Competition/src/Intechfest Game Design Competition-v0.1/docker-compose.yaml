@@ -1,0 +1,13 @@
+version: '3'
+
+networks:
+  proxy:
+    external:
+      name: shared-network
+
+services:
+  gdc-web:
+    build: .
+    restart: always
+    networks:
+      proxy:
