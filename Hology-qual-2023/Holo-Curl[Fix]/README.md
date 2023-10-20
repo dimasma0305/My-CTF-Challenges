@@ -1,4 +1,4 @@
-# Holo-Secret
+# Description
 
 Struktur challenge ini dibuat menggunakan standard tool berikut https://github.com/CTFd/ctfcli.
 
