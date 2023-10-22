@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open San', sans-serif;
+}
+
+.卡片 .圖片 img {
+  height: 150px;
+  margin: -100px 0 15px 0;
+  border-radius: 8px;
+  filter: drop-shadow(0 8px 8px);
+  transition: .2s;
+}
+
+.卡片 {
+  width: 300px;
+  height: min-content;
+  padding: 30px;
+  margin: 0 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.卡片 .圖片 {
+  width: 100%;
+  text-align: center;
+}
+
+.卡片 .主題 h1 {
+  color: black;
+  font-size: 33px;
+  letter-spacing: 0.5px;
+}
+
+.卡片 .主題 p {
+  color: #b3bac3;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.卡片 .詳情 {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.卡片 .詳情 span {
+  color: #4d84e3;
+  font-size: 15px;
+}
+
+.卡片 .詳情 p {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.卡片 button {
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #000;
+  font-weight: 600;
+  border-radius: 30px;
+}
+
+.卡片:nth-child(1) button {
+  background-color: #4b94E2;
+}
+
+.卡片:nth-child(2) button {
+  background-color: #f8db92;
+}
+
+.卡片:nth-child(3) button {
+  background-color: #62567e;
+}
+
+.卡片:nth-child(4) button {
+  background-color: #ea8ff2;
+}
+
+.卡片:nth-child(5) button {
+  background-color: #fa8a0a;
+}
+
+.卡片 button:hover {
+  background: grey;
+  color: aliceblue;
+}

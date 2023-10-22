@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  app:
+    build: src
+    ports:
+      - 42613:443
+      # - 443:443
+  bot:
+    build: bot
+    environment:
+      APPNAME: Admin
+      APPURL: https://app/
+      APPURLREGEX: ^(http|https)://.*
+      APPFLAG: Hology6{did_you_just_use_the_unitended_one_or_the_hardest_way_(itended_one)?}
+      APPLIMIT: 2
+      APPLIMITTIME: 60
+      DISPLAY: ${DISPLAY}
+    ports:
+      - 49655:8080
+    # volumes:
+      # - /tmp/.X11-unix:/tmp/.X11-unix
+

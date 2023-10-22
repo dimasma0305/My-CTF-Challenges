@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虚拟度假</title>
+
+    <!-- 添加 Hololive 主题的自定义 CSS 文件 -->
+    <link rel="stylesheet" href="hololive.css">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+        .font-family-karla {
+            font-family: karla;
+        }
+    </style>
+
+    <!-- AlpineJS -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+
+    <!-- Poppins 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- BoxIcons v2.1.2 -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- 自定义 CSS 文件 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white font-family-karla h-screen">
+    <main class=" flex-wrap">
+        <!-- Hololive 主题的头部 -->
+        <div class="w-full container mx-auto bg-blue-500 text-white py-4">
+            <div class="flex flex-col items-center py-4">
+                <a class="font-bold uppercase text-4xl" href="#">虚拟度假</a>
+                <p class="text-lg">享受 Hololive 的冒险！</p>
+            </div>
+        </div>
+
+        <div class="w-full container mx-auto py-4 text-gray-600">
+            <div class="flex flex-col items-center">
+                <p class="text-3xl font-bold">我们的代理</p>
+            </div>
+        </div>
+
+        <div class="mx-auto container flex flex-row flex-grow min-w-100 mt-32">
+            <div class="卡片">
+                <div class="圖片">
+                    <img src="gura icon.jpg" alt="...">
+                </div>
+                <div class="主題">
+                    <h1>Gura</h1>
+                    <p>Hololive-En 一期生</p>
+                </div>
+                <div class="詳情">
+                    <div class="歲數">
+                        <span>年龄</span>
+                        <p>大于9千岁</p>
+                    </div>
+                    <div class="高度">
+                        <span>身高</span>
+                        <p>141cm</p>
+                    </div>
+                </div>
+                <form action="https://www.youtube.com/channel/UCoSrY_IQQVpmIRZ9Xf-y93g">
+                    <button>立刻观看！</button>
+                </form>
+            </div>
+
+            <!-- Ame 卡片 -->
+            <div class="卡片">
+                <div class="圖片">
+                    <img src="ame icon.jpg" alt="...">
+                </div>
+                <div class="主題">
+                    <h1>Ame</h1>
+                    <p>Hololive-En 一期生</p>
+                </div>
+                <div class="詳情">
+                    <div class="歲數">
+                        <span>年龄</span>
+                        <p>暂时未知...</p>
+                    </div>
+                    <div class="高度">
+                        <span>身高</span>
+                        <p>150cm</p>
+                    </div>
+                </div>
+                <form action="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg">
+                    <button>立刻观看！</button>
+                </form>
+            </div>
+
+            <!-- Ina 卡片 -->
+            <div class="卡片">
+                <div class="圖片">
+                    <img src="ina icon.jpg" alt="...">
+                </div>
+                <div class="主題">
+                    <h1>Ina</h1>
+                    <p>Hololive-En 一期生</p>
+                </div>
+                <div class="詳情">
+                    <div class="歲數">
+                        <span>年龄</span>
+                        <p>████</p>
+                    </div>
+                    <div class="高度">
+                        <span>身高</span>
+                        <p>157cm</p>
+                    </div>
+                </div>
+                <form action="https://www.youtube.com/channel/UCMwGHR0BTZuLsmjY_NT5Pwg">
+                    <button>立刻观看！</button>
+                </form>
+            </div>
+
+            <!-- Calli 卡片 -->
+            <div class="卡片">
+                <div class="圖片">
+                    <img src="calli icon.jpg" alt="...">
+                </div>
+                <div class="主題">
+                    <h1>Calli</h1>
+                    <p>Hololive-En 一期生</p>
+                </div>
+                <div class="詳情">
+                    <div class="歲數">
+                        <span>年龄</span>
+                        <p>暂时未知...</p>
+                    </div>
+                    <div class="高度">
+                        <span>身高</span>
+                        <p>167cm</p>
+                    </div>
+                </div>
+                <form action="https://www.youtube.com/channel/UCL_qhgtOy0dy1Agp8vkySQg">
+                    <button>立刻观看！</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container mx-auto flex flex-wrap py-6">
+            <!-- 文章部分 -->
+            <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+                {% for key in bulletins.keys() %}
+                <article class="flex flex-col shadow my                <article class="flex flex-col shadow my-4">
+                    <!-- 文章图片 -->
+                    <img class="hover:opacity-75"
+                        src="https://source.unsplash.com/collection/1346951/1000x500?sig={{ randint(0,100) }}"
+                        alt="虚拟度假">
+                    <div class="bg-white flex flex-col justify-start p-6">
+                        <p class="text-3xl font-bold hover:text-pink-700 pb-4">{{ key }}</p>
+                        <p class="pb-3">{{ bulletins[key] }}</p>
+                    </div>
+                </article>
+                {% endfor %}
+            </section>
+
+            <!-- 侧边栏部分 -->
+            <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+                <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+                    <p class="text-xl font-semibold pb-5">关于 Hololive</p>
+                    <p class="pb-2">Hololive 机构的特别度假计划</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+</body>
+
+</html>
+
