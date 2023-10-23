@@ -5,7 +5,7 @@
 |Web|0/12|
 
 # Description
-Hololive just make a vacation agent website, can you check it for me?
+Just finished Hololep blog yesterday, can you check it for me?
 
 # Overview
 

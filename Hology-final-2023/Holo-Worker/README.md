@@ -1,10 +1,14 @@
-# Holo Blog
+# Holo Worker
 
-Struktur challenge ini dibuat menggunakan standard tool berikut https://github.com/CTFd/ctfcli.
+|Category|Solves|
+|--------|------|
+|Web|1/12|
 
-Untuk informasi challenge bisa di cek di dalam file `challenge.yml`.
+# Description
+It is said this note app will send your note to "Zeta", but how?
+can you check it for me? \
+**Note**: \
+This challenge require you to test it localy using google-chrome, if it's work then you can send
+your payload to the admin bot.
 
-# Install
-```
-sudo docker-compose up --build
-```
+# Overview
