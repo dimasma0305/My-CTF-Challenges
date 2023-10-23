@@ -22,7 +22,7 @@ public class Public {
 ```
 > [source code](https://github.com/dimasma0305/My-CTF-Challenges/blob/cffb36330020de892d3073a42d71bc6e50a8d23b/Hology-final-2023/Holo-Blog/src/src/main/java/com/blog/blog/controler/Public.java#L13)
 
-Kita dapat merubah atribute "lang" dengan melakukan bypass "guest" pada kode berikut:
+Dan yang kedua adalah null session trick untuk membypass `"guest".equals(role)`. Kita dapat merubah atribute "lang" dengan melakukan bypass "guest" pada kode berikut:
 
 ```java
     @PatchMapping("/lang")
