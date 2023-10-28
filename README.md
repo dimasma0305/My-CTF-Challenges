@@ -49,3 +49,11 @@ If you see a star with one or more unfilled stars "☆", that indicates the chal
 |[Holo-Blog](./Hology-final-2023/Holo-Blog/)|Web|★★★★|
 |[Holo-Vacation](./Hology-final-2023/Holo-Vacation/)|Web|★★★|
 |[Holo-Worker](./Hology-final-2023/Holo-Vacation/)|Web|★★☆|
+
+|Name|Category|Difficulty|
+|----|--------|----------|
+|[Calculator](./TCP1P-CTF-2023/Web/calculator/)|Web|★★★|
+|[Fetcher](./TCP1P-CTF-2023/Web/fetcher/)|Web|★★★|
+|[Latex](./TCP1P-CTF-2023/Web/Latex/)|Web|★★|
+|[PDFIFY](./TCP1P-CTF-2023/Web/PDFIFY/)|Web|★★★★|
+|[Un Secure](./TCP1P-CTF-2023/Web/Un%20Secure/)|Web|★★|
