@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  proxy:
+    image: nginx:latest
+    restart: always
+    ports:
+      - 36009:80
+    volumes:
+      - ./src:/var/www/html:ro
+      - ./proxy.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - internal
+    depends_on:
+      - bot
+      - app
+
+  app:
+    build: .
+    restart: always
+    networks:
+      - internal
+
+  bot:
+    build: bot
+    restart: always
+    environment:
+      APPNAME: Admin
+      APPURL: http://app:8080/
+      APPURLREGEX: ^http://app:8080/.*$
+      APPFLAG: STS23{sadly_xhtml_din't_fully_support_inline_style:(}
+      APPLIMIT: 2
+      APPLIMITTIME: 60
+    networks:
+      - internal
+
+networks:
+  internal:

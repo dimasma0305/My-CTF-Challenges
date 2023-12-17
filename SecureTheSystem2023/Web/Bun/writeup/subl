@@ -1,0 +1,7 @@
+#!/bin/bash
+urldecode() {
+  local url_encoded="${1//+/ }"
+  printf '%b' "${url_encoded//%/\\x}"
+}
+x=`urldecode "$1"`
+bash -c "${x:1}"

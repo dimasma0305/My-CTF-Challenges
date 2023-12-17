@@ -59,3 +59,11 @@ If you see a star with one or more unfilled stars "☆", that indicates the chal
 |[Latex](./TCP1P-CTF-2023/Web/Latex/)|Web|★★|
 |[PDFIFY](./TCP1P-CTF-2023/Web/PDFIFY/)|Web|★★★★|
 |[Un Secure](./TCP1P-CTF-2023/Web/Un%20Secure/)|Web|★★|
+
+## Secure The System 2023
+|Name|Category|Difficulty|
+|----|--------|----------|
+|[JWT ARCANUM](./SecureTheSystem2023/Cryptography/JWT%20ARCANUM/)|Crypto|★★|
+|[Blue Monday](./SecureTheSystem2023/Web/Blue%20Monday/)|Web|★★|
+|[Bun](./SecureTheSystem2023/Web/Bun/)|Web|★★★|
+|[UREL EX2S](./SecureTheSystem2023/Web/UREL-EX2S/)|Web|★★|

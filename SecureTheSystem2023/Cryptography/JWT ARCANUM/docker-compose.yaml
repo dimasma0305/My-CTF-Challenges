@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  proxy:
+    image: nginx:latest
+    ports:
+      - 8306:80
+    volumes:
+      - ./src/:/srv/app/
+      - ./proxy.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - internal
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    environment:
+      - APP_ENV=production
+      - APP_KEY=base64:kSr0puWm5Y2UyNUKpRFVxba+YVVv3wv1DN+e4QFBUIc=
+      - APP_DEBUG=false
+      - FLAG=STS23{should_have_used_builtins_cookie_session_because_my_custom_jwt_isnt_secure}
+    networks:
+      - internal
+
+networks:
+  internal:

