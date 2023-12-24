@@ -1,6 +1,6 @@
-# My CTF Challenges
+# CTF Challenge Ratings
 
-Welcome to my collection of CTF challenges designed for CTF competitions. I've categorized these challenges into different difficulty levels, each represented by a cool star rating:
+Welcome to my CTF challenges! I've simplified the difficulty levels using a star rating system:
 
 | Star | Difficulty |
 |------|------------|
@@ -10,7 +10,28 @@ Welcome to my collection of CTF challenges designed for CTF competitions. I've c
 | ★★★★ | Hard       |
 | ★★★★★| Insane     |
 
-If you see a star with one or more unfilled stars "☆", that indicates the challenge might be easier than expected due to unintended solutions. For example, if the star rating is "★☆☆☆" it was initially intended to be a hard challenge, but during the competition, it has unitended solution, making it much easier than anticipated.
+Each fulfilled criterion adds one star to the challenge's rating.
+
+## Challenge Criteria:
+
+### 1. Multifaceted Skills Needed ★:
+**Description:** The challenge demands expertise in various areas such as cryptography, reverse engineering, binary exploitation, web security, and forensic analysis. You'll need a diverse skill set to crack it.
+
+### 2. Complex Code/Payload/Bypass or Obfuscated Code/Payload/Bypass ★:
+**Description:** The challenge involves intricate code, payload, or bypass mechanisms, testing advanced reverse engineering skills. Unconventional encryption methods or payload structures may be used, adding an extra layer of complexity.
+
+### 3. Multiple Steps of Complexity ★:
+**Description:** The challenge should consist of multiple intricate steps or stages, each requiring a high level of skill and understanding of different security concepts.
+
+### 4. Dynamic Elements and Updates ★:
+**Description:** The challenge includes dynamic elements that change during the competition or requires adapting to frequent updates. This could involve a shifting attack surface, changing encryption keys.
+
+### 5. Hidden Attack Vectors or Non-Traditional Attack Vectors ★:
+**Description:** The challenge incorporates hidden or non-traditional attack vectors not immediately apparent. You'll need to think outside the box, exploiting uncommon vulnerabilities or using unconventional ways to interact with the system.
+
+Remember, each fulfilled criterion adds one star to the challenge's difficulty.
+
+If you see a star with one or more unfilled stars "☆," it indicates the challenge might be easier than expected due to unintended solutions. For example, a rating of "★☆☆☆" initially intended to be hard but has unintended solutions, making it much easier than anticipated. Good luck!
 
 ## Techcompfest 2023
 
@@ -27,7 +48,7 @@ If you see a star with one or more unfilled stars "☆", that indicates the chal
 |[APACI](./Intechfest-2023/Web-Exploitation/APACI/)|Web|★★★★|
 |[Intechfest Game Design Competition](./Intechfest-2023/Web-Exploitation/Intechfest%20Game%20Design%20Competition/)|Web|★★★|
 |[NOTEIFY](./Intechfest-2023/Web-Exploitation/NOTEIFY/)|Web|★★★|
-|[Samehadaku KW](./Intechfest-2023/Web-Exploitation/Samehadaku%20KW/)|Web|★★★★|
+|[Samehadaku KW](./Intechfest-2023/Web-Exploitation/Samehadaku%20KW/)|Web|★★★|
 |[Web Cembly](./Intechfest-2023/PWN/web-cembly/)|Web,PWN|★★|
 |[Web PWN](./Intechfest-2023/PWN/web-pwn/)|PWN,Web|★★★|
 |[No Connection](./Intechfest-2023/Misc/no-connection/)|Misc|★★★★|
@@ -63,7 +84,7 @@ If you see a star with one or more unfilled stars "☆", that indicates the chal
 ## Secure The System 2023
 |Name|Category|Difficulty|
 |----|--------|----------|
-|[JWT ARCANUM](./SecureTheSystem2023/Cryptography/JWT%20ARCANUM/)|Crypto|★★|
+|[JWT ARCANUM](./SecureTheSystem2023/Cryptography/JWT%20ARCANUM/)|Web,Crypto|★★|
 |[Blue Monday](./SecureTheSystem2023/Web/Blue%20Monday/)|Web|★★|
 |[Bun](./SecureTheSystem2023/Web/Bun/)|Web|★★★|
 |[UREL EX2S](./SecureTheSystem2023/Web/UREL-EX2S/)|Web|★★|
