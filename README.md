@@ -20,13 +20,13 @@ Each fulfilled criterion adds one star to the challenge's rating.
 2. **Complex Code/Payload/Bypass or Obfuscated Code/Payload/Bypass ★:**
 **Description:** The challenge involves intricate code, payload, or bypass mechanisms, testing advanced reverse engineering skills. Unconventional encryption methods or payload structures may be used, adding an extra layer of complexity.
 
-**3. Multiple Steps of Complexity ★:**
+3. **Multiple Steps of Complexity ★:**
 **Description:** The challenge should consist of multiple intricate steps or stages, each requiring a high level of skill and understanding of different security concepts.
 
-**4. Dynamic Elements and Updates ★:**
+4. **Dynamic Elements and Updates ★:**
 **Description:** The challenge includes dynamic elements that change during the competition or requires adapting to frequent updates. This could involve a shifting attack surface, changing encryption keys.
 
-**5. Hidden Attack Vectors or Non-Traditional Attack Vectors ★:**
+5. **Hidden Attack Vectors or Non-Traditional Attack Vectors ★:**
 **Description:** The challenge incorporates hidden or non-traditional attack vectors not immediately apparent. You'll need to think outside the box, exploiting uncommon vulnerabilities or using unconventional ways to interact with the system.
 
 Remember, each fulfilled criterion adds one star to the challenge's difficulty.
