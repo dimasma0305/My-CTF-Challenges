@@ -12,6 +12,8 @@ Welcome to my CTF challenges! I've simplified the difficulty levels using a star
 
 If you see a star with one or more unfilled stars "☆", it indicates the challenge might be easier than expected due to unintended solutions. For example, a rating of "★☆☆☆" initially intended to be hard but has unintended solutions, making it much easier than anticipated. Good luck!
 
+> Note: The difficulty of each challenge is calculated with https://dimasma0305.github.io/ctf-challenge-difficulty-calculator/
+
 ## Techcompfest 2022
 
 |Name|Category|Points|Difficulty|Stars|
