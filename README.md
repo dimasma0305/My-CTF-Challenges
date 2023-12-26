@@ -26,7 +26,7 @@ If you see a star with one or more unfilled stars "☆", it indicates the challe
 
 |Name|Category|Points | Difficulty | Stars |
 |----|--------|-------|------------|-------|
-|[APACI](./Intechfest-2023/Web-Exploitation/APACI/)|Web| 3.70/5.00 | hard | ★★★★ |
+|[APACI](./Intechfest-2023/Web-Exploitation/APACI/)|Web| 3.60/5.00 | hard | ★★★★ |
 |[Intechfest Game Design Competition](./Intechfest-2023/Web-Exploitation/Intechfest%20Game%20Design%20Competition/)|Web| 2.70/5.00 | medium | ★★★ |
 |[NOTEIFY](./Intechfest-2023/Web-Exploitation/NOTEIFY/)|Web| 3.10/5.00 | medium | ★★★ |
 |[Samehadaku KW](./Intechfest-2023/Web-Exploitation/Samehadaku%20KW/)|Web| 3.20/5.00 | medium | ★★★ |
