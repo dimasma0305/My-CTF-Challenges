@@ -1,0 +1,1 @@
+TCF2024{simple_command_injection_in_qute_browser}

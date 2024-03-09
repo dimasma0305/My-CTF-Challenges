@@ -73,14 +73,14 @@ If you see a star with one or more unfilled stars "☆", it indicates the challe
 ## TECHCOMPFEST 2024 Final
 |Name|Category| Points | Difficulty | Stars |
 |----|--------|--------|------------|-------|
-|[Challenge Kepepet](./TECHCOMFEST2024/Final/Web/challenge-kepepet/)|Web| 2.60/5.00 | medium | ★★★ |
+|[Challenge Kepepet](./TECHCOMFEST-2024/Final/Web/challenge-kepepet/)|Web| 2.60/5.00 | medium | ★★★ |
 
 ## TECHCOMPFEST 2024 Quals
 |Name|Category| Points | Difficulty | Stars |
 |----|--------|--------|------------|-------|
-|[Tabungan](./TECHCOMFEST2024/Quals/Blockchain/Tabungan/)|Blockchain| 2.00/5.00 | easy | ★★ |
-|[Kuta](./TECHCOMFEST2024/Quals/Web/kuta/)|Web| 2.30/5.00 | easy | ★★ |
-|[Lul](./TECHCOMFEST2024/Quals/Web/lul/)|Web| 2.30/5.00 | easy | ★★ |
-|[Pecel](./TECHCOMFEST2024/Quals/Web/pecel/)|Web| 2.80/5.00 | medium | ★★★ |
-|[Pressword](./TECHCOMFEST2024/Quals/Web/pressword/)|Web| 2.50/5.00 | medium | ★★★ |
-|[Yo Nda Tau](./TECHCOMFEST2024/Quals/Web/yo-nda-tau/)|Web| 2.80/5.00 | medium | ★★★ |
+|[Tabungan](./TECHCOMFEST-2024/Quals/Blockchain/Tabungan/)|Blockchain| 2.00/5.00 | easy | ★★ |
+|[Kuta](./TECHCOMFEST-2024/Quals/Web/kuta/)|Web| 2.30/5.00 | easy | ★★ |
+|[Lul](./TECHCOMFEST-2024/Quals/Web/lul/)|Web| 2.30/5.00 | easy | ★★ |
+|[Pecel](./TECHCOMFEST-2024/Quals/Web/pecel/)|Web| 2.80/5.00 | medium | ★★★ |
+|[Pressword](./TECHCOMFEST-2024/Quals/Web/pressword/)|Web| 2.50/5.00 | medium | ★★★ |
+|[Yo Nda Tau](./TECHCOMFEST-2024/Quals/Web/yo-nda-tau/)|Web| 2.80/5.00 | medium | ★★★ |

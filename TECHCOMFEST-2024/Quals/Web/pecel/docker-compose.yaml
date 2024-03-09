@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  proxy:
+    build:
+      dockerfile: Dockerfile.nginx
+      context: .
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - 44366:80
+    networks:
+      - internal
+
+  app:
+    build: ./
+    read_only: true
+    networks:
+      - internal
+
+networks:
+  internal:

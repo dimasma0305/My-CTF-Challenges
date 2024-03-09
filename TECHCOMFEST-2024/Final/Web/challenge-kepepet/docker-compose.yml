@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    ports:
+      - 8080:8080
+    networks:
+      - internal
+  bot:
+    build: bot
+    ports:
+      - 8081:80
+    environment:
+      APPNAME: Admin
+      APPURL: http://app:8080/
+      APPURLREGEX: ^.*$
+      APPFLAG: TCF2024{mini_xss_using_httpx,_how_far_you_can_minify_it?_dm_me}
+      APPLIMIT: 2
+      APPLIMITTIME: 60
+    networks:
+      - internal
+
+networks:
+  internal:

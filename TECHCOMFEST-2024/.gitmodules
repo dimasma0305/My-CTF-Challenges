@@ -1,0 +1,5 @@
+[submodule ".dependency/blockchain"]
+	path = .dependency/blockchain
+	url = git@github.com:TCP1P/Paradigmctf-BlockChain-Infra-Extended.git
+[submodule "./.dependency/blockchain/"]
+	url = https://github.com/TCP1P/Paradigmctf-BlockChain-Infra-Extended.git

