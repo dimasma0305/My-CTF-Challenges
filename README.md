@@ -84,3 +84,10 @@ If you see a star with one or more unfilled stars "☆", it indicates the challe
 |[Pecel](./TECHCOMFEST-2024/Quals/Web/pecel/)|Web| 2.80/5.00 | medium | ★★★ |
 |[Pressword](./TECHCOMFEST-2024/Quals/Web/pressword/)|Web| 2.50/5.00 | medium | ★★★ |
 |[Yo Nda Tau](./TECHCOMFEST-2024/Quals/Web/yo-nda-tau/)|Web| 2.80/5.00 | medium | ★★★ |
+
+## TECHCOMPFEST 2024 Warmup
+|Name|Category| Points | Difficulty | Stars |
+|----|--------|--------|------------|-------|
+|[Bukan Kiinzu](./TECHCOMFEST-2024/Warmup/Blockchain/bukan-kiinzu/)|Blockchain| 2.00/5.00 | easy | ★★ |
+|[Your Name Revenge](./TECHCOMFEST-2024/Warmup/Web/Your-Name-Revenge/)|Web| 2.30/5.00 | easy | ★★ |
+|[Your Name](./TECHCOMFEST-2024/Warmup/Web/Your-Name/)|Web| 2.00/5.00 | easy | ★★ |
