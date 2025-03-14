@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Zeno Day"
+author: "Dimas"
+category: Pwn
+description: |
+  is deno sandbox even secure? let's find out!
+
+value: 1000
+type: DynamicContainer
+
+scripts:
+  start: cd src && docker build -t zeno-day .
+
+container:
+  containerImage: "zeno-day:latest"
+  flagTemplate: INTECHFEST{bypassing_proc_using_link_is_something_that_developer_often_missout}
+  memoryLimit: 512
+  cpuCount: 2
+  storageLimit: 512
+  containerExposePort: 8000
+  enableTrafficCapture: false
+
+provide: ./dist
+
+hints:
+  - rw only? what you can do with that? i think you need to bypass something too, think out of the box like if 0day is an options. nah it's actually 0day.

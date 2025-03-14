@@ -91,3 +91,22 @@ If you see a star with one or more unfilled stars "☆", it indicates the challe
 |[Bukan Kiinzu](./TECHCOMFEST-2024/Warmup/Blockchain/bukan-kiinzu/)|Blockchain| 2.00/5.00 | easy | ★★ |
 |[Your Name Revenge](./TECHCOMFEST-2024/Warmup/Web/Your-Name-Revenge/)|Web| 2.30/5.00 | easy | ★★ |
 |[Your Name](./TECHCOMFEST-2024/Warmup/Web/Your-Name/)|Web| 2.00/5.00 | easy | ★★ |
+
+## Intechfest 2024
+|Name|Category| Points | Difficulty | Stars |
+|----|--------|--------|------------|-------|
+|[Zeno Day](./Intechfest-2024/Pwn/zeno_day/)|PWN| 3.40/5.00 | medium | ★★★ |
+|[Client Side Programming](./Intechfest-2024/Web/Client%20Side%20Programming/)|Web| 3.50/5.00 | hard | ★★★★ |
+|[Imposible](./Intechfest-2024/Web/Imposible/)|Web| 3.10/5.00 | medium | ★★★ |
+
+## TCP1P CTF 2024
+|Name|Category| Points | Difficulty | Stars |
+|----|--------|--------|------------|-------|
+|[Unsolveable Money Captcha](./TCP1P-CTF-2024/Blockchain/unsolveable-money-captcha/)|Blockchain| 2.00/5.00 | easy | ★★ |
+|[Denis JS](./TCP1P-CTF-2024/Misc/denis-js/)|Misc| 2.20/5.00 | easy | ★★ |
+|[Denis JS (Fixed)](./TCP1P-CTF-2024/Misc/denis-js%20(fixed)/)|Misc| 2.60/5.00 | medium | ★★★ |
+|[LookDown](./TCP1P-CTF-2024/Mobile/LookDown/)|Mobile| 2.40/5.00 | easy | ★★ |
+|[LookUp](./TCP1P-CTF-2024/Mobile/LookUp/)|Mobile| 3.20/5.00 | medium | ★★★ |
+|[Pain](./TCP1P-CTF-2024/Web/Pain/)|Web| 3.80/5.00 | hard | ★★★★ |
+|[pressword-v2](./TCP1P-CTF-2024/Web/pressword-v2/)|Web| 3.50/5.00 | hard | ★★★★ |
+|[Shikanoko nokonoko koshitantan!](./TCP1P-CTF-2024/Web/Shikanoko%20nokonoko%20koshitantan!/)|Web| 3.20/5.00 | medium | ★★★ |

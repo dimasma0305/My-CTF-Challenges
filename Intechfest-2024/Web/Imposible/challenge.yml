@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: "Imposible"
+author: "Dimas"
+category: Web
+description: |
+    It's even possible to solve this challenge? I don't think so.
+
+value: 1000
+type: DynamicContainer
+
+scripts:
+    start: docker build -t imposible .
+
+container:
+    flagTemplate: "INTECHFEST{golang_race_condition_is_hard_to_find_[TEAM_HASH]}"
+    containerImage: "imposible:latest"
+    memoryLimit: 1024
+    cpuCount: 2
+    storageLimit: 1024
+    containerExposePort: 8080
+    enableTrafficCapture: false
+
+provide: ./src
+
+hints:
+    - maybe what you're missing is the fact that golang using goroutine to handle requests
