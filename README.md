@@ -110,3 +110,16 @@ If you see a star with one or more unfilled stars "☆", it indicates the challe
 |[Pain](./TCP1P-CTF-2024/Web/Pain/)|Web| 3.80/5.00 | hard | ★★★★ |
 |[pressword-v2](./TCP1P-CTF-2024/Web/pressword-v2/)|Web| 3.50/5.00 | hard | ★★★★ |
 |[Shikanoko nokonoko koshitantan!](./TCP1P-CTF-2024/Web/Shikanoko%20nokonoko%20koshitantan!/)|Web| 3.20/5.00 | medium | ★★★ |
+
+## TSA Cyber Champion 2024
+|Name|Category| Points | Difficulty | Stars |
+|----|--------|--------|------------|-------|
+|[Exploitasi Kerentanan XSS v2](./2024-TSA-Cyber-Champion/Web/exploitasi-kerentanan-xss-v2/)| 3.80/5.00 | hard | ★★☆☆ |
+|[New Gadget](./2024-TSA-Cyber-Champion/Web/new-gadget/)| 3.30/5.00 | medium | ★★★ |
+|[File Not Found v2](./2024-TSA-Cyber-Champion/Web/file-not-found-v2/)| 2.30/5.00 | easy | ★★ |
+
+## Slashroot 8 (2024)
+|Name|Category| Points | Difficulty | Stars |
+|----|--------|--------|------------|-------|
+|[Ezz Memento](./slashroot-8-challs/quals/web/ezz%20memento/)| 2.20/5.00 | easy | ★★ |
+|[Hingga diangkasa sana di se java](./slashroot-8-challs/finals/web/Hingga%20diangkasa%20sana%20di%20se%20java/)| 3.50/5.00 | hard | ★★★★ |

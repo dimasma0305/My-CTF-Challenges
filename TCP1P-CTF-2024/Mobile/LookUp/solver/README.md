@@ -1,6 +1,6 @@
 https://shivasurya.me/security/android/android-security/2024/01/24/java-deserialization-rce-android-application-layer.html
 
-Derserialization in intent Extras
+Deserialization in intent Extras. Because we don't know the actual code of the program, we need to get the serial version UID using this tool https://docs.oracle.com/javase/10/tools/serialver.htm and then make a vulnerable class using that UID.
 
 ```java
 package com.dimas.lookupexploit;
