@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: Hingga diangkasa sana, di se java
+author: Dimas Maulana
+type: StaticAttachment
+description: |-
+  Proof that Java is a sus programming language: https://youtu.be/22lDAPbMFaY?t=69
+
+  It even ends at timestamp 69, the infamous, cursed number! 😱
+
+  Connect: http://{{ .host }}:7534
+
+flags:
+  - slashroot8{it_is_really_private_UwU}
+
+value: 1000
+
+provide: ./dist
+
+visible: true
+scripts:
+  start: |
+    CHALL=$(basename "$PWD")
+    pm2 stop "$CHALL"
+    pm2 delete "$CHALL"
+    pm2 start "bash ./run.sh" --name "$CHALL"

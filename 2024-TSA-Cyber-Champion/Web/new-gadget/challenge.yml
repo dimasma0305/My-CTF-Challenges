@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dimasma0305/ctfify/refs/heads/master/function/gzcli/embeds/config/challenge.schema.yaml
+
+name: "New Gadget"
+author: "dimas"
+description: |
+  **Author**: dimas
+
+  Feel free to write an article about the gadget, even if you didn't manage to solve it!
+  If you do, please don't forget to mention me.
+
+  Thanks a lot!
+
+  Website: http://{{ .host }}:9141
+type: "StaticAttachment"
+
+flags:
+  - "TSA{new_prototype_pollution_gadget_with_mongoose}"
+
+value: 1000
+
+scripts:
+  start: bash run.sh
+  stop: |
+    CHALL=$(basename "$PWD")
+    pm2 stop "$CHALL"
+    pm2 delete "$CHALL"
+provide: ./dist

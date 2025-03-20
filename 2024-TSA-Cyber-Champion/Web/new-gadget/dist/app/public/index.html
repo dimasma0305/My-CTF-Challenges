@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Maker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body data-bs-theme="dark">
+    <header class="d-flex flex-column text-center mt-3">
+        <h1>Note Maker</h1>
+    </header>
+    <main class="container d-flex justify-content-center mt-3">
+        <div class="d-flex flex-column justify-content-center text-center gap-2">
+            <div class="vw-100 d-flex justify-content-center" id="myform">
+                <div x-data="{ formData: { title: '', value: '' } }"
+                    class="w-50 d-flex flex-column form-floating gap-2">
+                    <div class="form-floating">
+                        <input x-model="formData.title" type="text" id="title" class="form-control">
+                        <label for="title">Title</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea x-model="formData.value" id="value" class="form-control"></textarea>
+                        <label for="value">Your Note...</label>
+                    </div>
+                    <button @click="submitForm" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            <div x-data="{}">
+                <div class="card-deck row gap-2 justify-content-center">
+                    <template x-for="note in await fetchNotes()" :key="note._id">
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title" x-text="note.title"></h5>
+                                <p class="card-text" x-text="note.value"></p>
+                                <button class="btn btn-danger" @click="deleteNote(note._id)">delete</button>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function deleteNote(id) {
+            fetch('/api/v1/note/' + id, { method: "DELETE" }).then(response => location.reload())
+        }
+        function fetchNotes() {
+            return new Promise((res, rej) => {
+                fetch('/api/v1/notes')
+                    .then(response => response.json())
+                    .then(data => {
+                        res(data); // Update the 'notes' data property with the fetched data
+                    })
+                    .catch(error => {
+                        rej(error);
+                    });
+            })
+        }
+        function submitForm() {
+            const formData = this.formData;
+            fetch('/api/v1/note', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => {
+                    location.reload()
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>

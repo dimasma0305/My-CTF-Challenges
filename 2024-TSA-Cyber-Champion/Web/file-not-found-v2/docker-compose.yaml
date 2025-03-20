@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    read_only: true
+    tmpfs:
+      - /var/run
+    ports:
+      - 51669:80

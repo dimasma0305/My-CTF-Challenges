@@ -1,0 +1,84 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #1b1b1b;
+    color: #ddd;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #2e2e2e;
+    padding: 15px 0;
+    border-bottom: 2px solid #444;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0e68c;
+}
+
+/* Page content */
+.content {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 2.8em;
+    color: #f0e68c;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccc;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2e2e2e;
+    color: #aaa;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #444;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Add some shadowy style to content */
+.shadow-text {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}

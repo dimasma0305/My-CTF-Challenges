@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../../challenge.schema.yaml
+name: EZZ Memento
+author: Dimas Maulana
+type: StaticAttachment
+description: |-
+  java is ezz... zzz...
+
+  but wait! whattt.......!?
+
+  Connect: http://{{ .host }}:7534
+
+flags:
+  - slashroot8{it_is_really_private_UwU}
+value: 1000
+
+provide: ./dist
+
+visible: true
+scripts:
+  start: cd ./src && docker compose up --build --detach
+  stop: cd ./src && docker compose down --volumes

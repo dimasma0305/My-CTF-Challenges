@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dimasma0305/ctfify/refs/heads/master/function/gzcli/embeds/config/challenge.schema.yaml
+
+name: "File Not Found v2"
+author: "dimas"
+description: |
+  **Author**: dimas
+
+  Mudah untuk yg bisa, sulit utk yg tdk bisa
+
+  http://{{ .host }}:51669
+
+  Flag di /readflag -> /root/flag.txt
+type: "StaticAttachment"
+
+flags:
+  - "TSA{cyber_strike_web_problem_2.0}"
+
+value: 1000
+
+scripts:
+  start: docker compose up --build -d

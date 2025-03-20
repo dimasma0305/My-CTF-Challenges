@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Maker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+</head>
+
+<body data-bs-theme="dark">
+    <div class="container vh-100 d-flex flex-column justify-content-center">
+        <div class="row justify-content-center" x-data="{formData:{name:''}}">
+            <div class="col-6">
+                <div class="d-flex">
+                    <input type="text" x-model="formData.name" class="form-control" name="name" id="name" placeholder="Name">
+                    <button @click="submitForm" class="btn btn-primary">Action</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function submitForm() {
+            const formData = this.formData;
+            fetch('/api/v1/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => {
+                location = "/"
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+
+</html>
